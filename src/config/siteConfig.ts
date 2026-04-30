@@ -1,350 +1,217 @@
 export const siteConfig = {
-  // IDENTITÉ
-  companyName: "Brillance Auto 22",
-  tagline: "Nettoyage et detailing automobile",
-  slogan: "Redonnez de l'éclat à votre véhicule",
-  city: "Trévé",
-  region: "Côtes-d'Armor, Bretagne",
-  
-  // HERO
+  companyName: "BRL Wash 56",
+  tagline: "Nettoyage automobile & mobilier à domicile",
+  slogan: "Votre véhicule propre, sans vous déplacer",
+  city: "Vannes",
+  region: "Morbihan, Bretagne",
+
   hero: {
-    title: "Brillance Auto 22",
-    subtitle: "Nettoyage et detailing automobile à Trévé",
-    tagline: "Votre spécialiste du nettoyage auto professionnel",
-    description: "Brillance Auto 22 vous propose des services de nettoyage intérieur et extérieur, ainsi que du detailing haut de gamme pour redonner tout son éclat à votre véhicule. Particuliers et professionnels.",
-    cta: "Prendre rendez-vous"
+    title: "BRL Wash 56",
+    subtitle: "Nettoyage automobile à domicile — Vannes & Morbihan",
+    tagline: "Votre spécialiste du nettoyage auto à domicile",
+    description: "Jean-Damien intervient directement chez vous avec son matériel professionnel entièrement autonome. Voiture, canapés, matelas — partout en Morbihan.",
+    cta: "Demander un devis"
   },
 
-  // À PROPOS
   about: {
-    title: "L'excellence du nettoyage automobile",
-    story: "Brillance Auto 22 est votre spécialiste du nettoyage et du detailing automobile à Trévé. Nous mettons notre expertise et notre passion au service de votre véhicule pour lui redonner tout son éclat.",
-    mission: "Notre mission : offrir des prestations de nettoyage automobile de haute qualité, en utilisant des produits professionnels et des techniques adaptées à chaque type de véhicule.",
-    values: "Chez Brillance Auto 22, nous privilégions la qualité du travail, l'attention aux détails et la satisfaction de nos clients, qu'ils soient particuliers ou professionnels.",
-    expertise: "Du simple nettoyage extérieur au detailing complet avec protection céramique, nous proposons une gamme complète de services adaptés à tous vos besoins."
+    title: "La passion du nettoyage, à votre porte",
+    story: "À 18 ans, Jean-Damien Barle a créé BRL Wash 56 avec une idée simple : vous apporter un service de qualité professionnelle, directement chez vous. Né en Polynésie et vannetais depuis l'âge de 3 ans, il s'est équipé de matériel professionnel pour proposer un service à domicile de premier niveau.",
+    mission: "Fourgon utilitaire aménagé, groupe électrogène, compresseur, aspirateur extracteur, nettoyeur haute pression : Jean-Damien est 100% autonome. Il intervient même en appartement, sans accès à l'eau ni à l'électricité.",
+    values: "La passion des voitures depuis tout petit, la rigueur d'un lycéen en Bac Pro Métiers de la Relation Client, et l'investissement d'un entrepreneur déterminé : voilà BRL Wash 56.",
+    expertise: "Nettoyage intérieur voiture (3 formules dès 55€), nettoyage mobilier à domicile (canapés, matelas dès 30€), intervention chez vous ou sur votre lieu de travail."
   },
 
-  // SERVICES
-  services: {
-    title: "Nos services",
-    subtitle: "Une gamme complète pour l'entretien esthétique de votre véhicule",
-    items: [
-      {
-        title: "Nettoyage Intérieur",
-        icon: "🧹",
-        description: "Remise à neuf complète de l'habitacle",
-        details: [
-          "Aspiration complète",
-          "Dépoussiérage des surfaces",
-          "Nettoyage des vitres intérieures",
-          "Shampouinage des sièges et moquettes",
-          "Traitement antibactérien",
-          "Soins cuir*",
-          "Désodorisation de l'habitacle",
-          "Nettoyage du tableau de bord",
-          "Nettoyage des portières et garnitures",
-          "Aspiration du coffre"
-        ]
-      },
-      {
-        title: "Nettoyage Extérieur",
-        icon: "💧",
-        description: "Lavage et remise en état de la carrosserie",
-        details: [
-          "Prélavage haute pression",
-          "Lavage manuel avec produits adaptés",
-          "Nettoyage des jantes",
-          "Décontamination de la carrosserie",
-          "Nettoyage de la cire",
-          "Lustrage du moteur*",
-          "Nettoyage du pare-brise*",
-          "Séchage soigné",
-          "Nettoyage des joints et bas de caisse",
-          "Finitions impeccables"
-        ]
-      },
-      {
-        title: "Detailing Extérieur",
-        icon: "✨",
-        description: "Rénovation esthétique haut de gamme",
-        details: [
-          "Décontamination complète",
-          "Polissage professionnel",
-          "Correction des micro-rayures",
-          "Application de cire haute qualité",
-          "Protection carrosserie céramique",
-          "Finitions premium*",
-          "Rénovation des optiques",
-          "Traitement des plastiques extérieurs",
-          "Brillance longue durée",
-          "Protection contre les UV"
-        ]
-      }
-    ]
-  },
-
-  // PRESTATIONS DÉTAILLÉES
-  detailedServices: {
-    interior: {
-      title: "Nettoyage Intérieur",
+  formules: [
+    {
+      name: "Élégance",
+      price: "55€",
+      badge: null,
+      deplacement: null,
+      color: "border-cyan-500/30 hover:border-cyan-500",
       items: [
-        "Aspiration",
-        "Dépoussiérage",
-        "Vitres",
-        "Shampouinage antibactérien",
-        "Soins cuir*"
+        "Aspiration complète des tapis & moquettes en profondeur",
+        "Nettoyage soigné des plastiques",
+        "Dégraissage & brillance des vitres intérieures",
+        "Nettoyage du coffre"
       ]
     },
-    exterior: {
-      title: "Nettoyage Extérieur",
+    {
+      name: "Signature",
+      price: "85€",
+      badge: "Populaire",
+      deplacement: "Déplacement inclus jusqu'à 8 km",
+      color: "border-cyan-400/30 hover:border-cyan-400",
       items: [
-        "Prélavage",
-        "Lavage manuel",
-        "Jantes",
-        "Décontamination",
-        "Cire",
-        "Moteur",
-        "Pare-brise*"
+        "Aspiration complète des tapis et moquettes",
+        "Nettoyage et protection des plastiques",
+        "Nettoyage des vitres et du coffre",
+        "Détail des contours de porte",
+        "Rénovation plastique pour raviver les surfaces ternies",
+        "Nettoyage soigné du volant"
       ]
     },
-    detailing: {
-      title: "Detailing Extérieur",
+    {
+      name: "Excellence",
+      price: "125€",
+      badge: "Premium",
+      deplacement: "Déplacement inclus jusqu'à 15 km",
+      color: "border-sky-400/30 hover:border-sky-400",
       items: [
-        "Décontamination",
-        "Polissage",
-        "Cire",
-        "Protection carrosserie céramique",
-        "Finitions*"
+        "Aspiration et nettoyage en profondeur des moquettes et tapis",
+        "Nettoyage complet du coffre",
+        "Détail et nettoyage des contours et joints de porte",
+        "Rénovation des surfaces plastiques et cuirs",
+        "Nettoyage vapeur",
+        "Shampooing moquettes et tapis",
+        "Entretien complet des sièges en cuir",
+        "Nettoyage et soin du volant"
       ]
-    },
-    note: "*selon services et options sélectionnés"
+    }
+  ],
+
+  mobilier: {
+    title: "Nettoyage Mobilier",
+    subtitle: "Canapés & matelas — à votre domicile",
+    tarifs: [
+      { label: "Canapé 1 place", price: "30€" },
+      { label: "Canapé 2 places", price: "40€" },
+      { label: "Canapé 3 places", price: "55€" },
+      { label: "Canapé 4 places", price: "70€" },
+      { label: "Canapé 5-6 places / angle", price: "110€" },
+      { label: "Grand canapé 7-10 places", price: "130€" }
+    ],
+    note: "*Les tarifs peuvent varier en fonction de l'état & du gabarit des différents mobiliers"
   },
 
-  // AVANTAGES
-  advantages: {
-    title: "Pourquoi choisir Brillance Auto 22 ?",
-    items: [
-      {
-        icon: "⭐",
-        title: "Qualité professionnelle",
-        description: "Produits et techniques de qualité supérieure"
-      },
-      {
-        icon: "👨‍🔧",
-        title: "Expertise",
-        description: "Savoir-faire et attention aux détails"
-      },
-      {
-        icon: "🏢",
-        title: "Particuliers & Pros",
-        description: "Services adaptés à tous types de clients"
-      },
-      {
-        icon: "💎",
-        title: "Finitions impeccables",
-        description: "Résultat professionnel garanti"
-      },
-      {
-        icon: "🧴",
-        title: "Produits premium",
-        description: "Utilisation de produits professionnels"
-      },
-      {
-        icon: "🚗",
-        title: "Tous véhicules",
-        description: "Voitures, SUV, utilitaires"
-      },
-      {
-        icon: "📍",
-        title: "Emplacement à Trévé",
-        description: "Facile d'accès dans les Côtes-d'Armor"
-      },
-      {
-        icon: "⏰",
-        title: "Horaires pratiques",
-        description: "Ouvert du lundi au vendredi"
-      }
-    ]
-  },
+  paiement: "Un acompte au début & le reste au résultat",
 
-  // TYPES DE VÉHICULES
-  vehicles: {
-    title: "Tous types de véhicules acceptés",
-    types: [
-      { name: "Citadines", icon: "🚗" },
-      { name: "Berlines", icon: "🚙" },
-      { name: "SUV", icon: "🚙" },
-      { name: "4x4", icon: "🚙" },
-      { name: "Utilitaires", icon: "🚐" },
-      { name: "Monospaces", icon: "🚐" }
-    ]
-  },
-
-  // CLIENTÈLE
-  clientele: {
-    title: "Nous intervenons pour",
-    types: [
-      {
-        name: "Particuliers",
-        icon: "👤",
-        description: "Nettoyage et entretien de votre véhicule personnel"
-      },
-      {
-        name: "Professionnels",
-        icon: "🏢",
-        description: "Flottes d'entreprise, véhicules de société, location"
-      }
-    ]
-  },
-
-  // PROCESSUS
   process: {
     title: "Comment ça marche ?",
     steps: [
       {
         number: "01",
         title: "Contact",
-        description: "Contactez-moi par message privé pour un devis"
+        description: "Appelez ou envoyez un message pour un devis rapide"
       },
       {
         number: "02",
-        title: "Devis personnalisé",
-        description: "Je vous propose un devis adapté à vos besoins"
+        title: "Devis",
+        description: "Devis personnalisé adapté à votre véhicule et vos besoins"
       },
       {
         number: "03",
-        title: "Prise de rendez-vous",
-        description: "Nous fixons un créneau qui vous convient"
+        title: "Rendez-vous",
+        description: "Je me déplace chez vous, à l'heure convenue"
       },
       {
         number: "04",
-        title: "Prestation",
-        description: "Je m'occupe de votre véhicule avec le plus grand soin"
+        title: "Intervention",
+        description: "Nettoyage professionnel avec mon matériel autonome"
       },
       {
         number: "05",
         title: "Résultat",
-        description: "Votre véhicule retrouve tout son éclat !"
+        description: "Votre voiture ou mobilier comme neuf !"
       }
     ]
   },
 
-  // ZONE D'INTERVENTION
   zone: {
     title: "Zone d'intervention",
-    center: "Trévé (22600)",
+    center: "Vannes (56)",
     mainCities: [
-      "Trévé",
-      "Loudéac",
-      "Saint-Caradec",
-      "La Motte",
-      "Plémet",
-      "Saint-Barnabé",
-      "Grâce-Uzel",
-      "Le Quillio",
-      "Uzel",
-      "Saint-Thélo",
-      "Merléac",
-      "Corlay",
-      "Caurel",
-      "Hémonstoir",
-      "Saint-Guen"
+      "Vannes",
+      "Auray",
+      "Lorient",
+      "Pontivy",
+      "Ploërmel",
+      "Muzillac",
+      "Questembert",
+      "Elven",
+      "Theix-Noyalo",
+      "Baden",
+      "Plescop",
+      "Saint-Avé",
+      "Séné",
+      "Arradon",
+      "Larmor-Baden"
     ]
   },
 
-  // CONTACT
   contact: {
     title: "Me contacter",
-    address: {
-      street: "51 Le Cosquer",
-      city: "22600 Trévé",
-      region: "Côtes-d'Armor, Bretagne"
+    phone: "06 73 66 52 98",
+    email: "brlwash56@gmail.com",
+    city: "Vannes (56), Morbihan",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=61584741573814",
+      instagram: "https://www.instagram.com/brlwash56",
+      tiktok: "https://www.tiktok.com/@brl.wash.56",
+      handle: "@brlwash56"
     },
-    phone: "06 28 78 79 37",
-    email: "contact@brillanceauto22.fr",
     schedule: {
-      title: "Horaires d'ouverture",
+      title: "Disponibilité",
       hours: [
-        { day: "Lundi", hours: "09:00 - 17:30" },
-        { day: "Mardi", hours: "09:00 - 17:30" },
-        { day: "Mercredi", hours: "09:00 - 17:30" },
-        { day: "Jeudi", hours: "09:00 - 17:30" },
-        { day: "Vendredi", hours: "09:00 - 17:30" },
-        { day: "Samedi", hours: "Fermé" },
+        { day: "Lundi", hours: "Sur rendez-vous" },
+        { day: "Mardi", hours: "Sur rendez-vous" },
+        { day: "Mercredi", hours: "Sur rendez-vous" },
+        { day: "Jeudi", hours: "Sur rendez-vous" },
+        { day: "Vendredi", hours: "Sur rendez-vous" },
+        { day: "Samedi", hours: "Sur rendez-vous" },
         { day: "Dimanche", hours: "Fermé" }
       ],
-      note: "Sur rendez-vous uniquement"
-    },
-    cta: "Contactez-moi par message privé !"
+      note: "Service à domicile — Sur rendez-vous uniquement"
+    }
   },
 
-  // VALEURS
   values: [
-    { text: "Qualité", icon: "⭐" },
-    { text: "Expertise", icon: "🎯" },
-    { text: "Finitions", icon: "✨" },
-    { text: "Professionnalisme", icon: "👔" },
-    { text: "Passion", icon: "❤️" },
-    { text: "Satisfaction", icon: "😊" }
+    { text: "À domicile", icon: "🏠" },
+    { text: "100% autonome", icon: "⚡" },
+    { text: "Produits professionnels", icon: "🧴" },
+    { text: "Particuliers & Pros", icon: "👔" },
+    { text: "Passion voiture", icon: "❤️" },
+    { text: "Satisfaction garantie", icon: "😊" }
   ],
 
-  // POINTS FORTS
-  highlights: [
-    "Nettoyage intérieur complet",
-    "Nettoyage extérieur professionnel",
-    "Detailing haut de gamme",
-    "Protection céramique",
-    "Traitement antibactérien",
-    "Rénovation des optiques",
-    "Polissage et lustrage",
-    "Particuliers et professionnels",
-    "Produits professionnels",
-    "Finitions impeccables"
-  ],
-
-  // FAQ
   faq: [
     {
-      question: "Quels services proposez-vous ?",
-      answer: "Nous proposons trois catégories de services : le nettoyage intérieur (aspiration, dépoussiérage, shampouinage, etc.), le nettoyage extérieur (lavage manuel, jantes, décontamination, etc.) et le detailing extérieur (polissage, protection céramique, finitions premium)."
+      question: "Vous intervenez vraiment à domicile ?",
+      answer: "Oui, c'est notre point fort ! Je me déplace directement chez vous avec mon fourgon équipé, mon groupe électrogène et tout le matériel nécessaire. Vous n'avez pas besoin de vous déplacer."
     },
     {
-      question: "Intervenez-vous à domicile ?",
-      answer: "Non, nos prestations sont réalisées sur place à notre atelier situé au 51 Le Cosquer à Trévé."
+      question: "Puis-je bénéficier du service en appartement ?",
+      answer: "Absolument ! Grâce à mon groupe électrogène, je suis totalement autonome en électricité. Je peux intervenir même si vous habitez dans un appartement en étage, sans accès à l'eau ni à une prise."
     },
     {
-      question: "Travaillez-vous avec des professionnels ?",
-      answer: "Oui, nous intervenons aussi bien pour les particuliers que pour les professionnels (flottes d'entreprise, véhicules de société, location)."
+      question: "Quelle formule choisir ?",
+      answer: "La formule Élégance (55€) convient pour un entretien régulier. La Signature (85€) est notre formule populaire avec plus de détails (déplacement inclus jusqu'à 8 km). L'Excellence (125€) est le nettoyage complet avec vapeur et soin du cuir (déplacement inclus jusqu'à 15 km)."
     },
     {
-      question: "Comment obtenir un devis ?",
-      answer: "Contactez-moi par message privé en précisant le type de véhicule et les services souhaités, je vous enverrai un devis personnalisé."
+      question: "Faites-vous aussi les canapés et matelas ?",
+      answer: "Oui ! Je propose un service de nettoyage de mobilier à domicile : canapés et matelas. Les tarifs vont de 30€ (canapé 1 place) à 130€ (grand canapé 7-10 places). Devis personnalisé sur demande."
     },
     {
-      question: "Quels types de véhicules acceptez-vous ?",
-      answer: "Nous acceptons tous types de véhicules : citadines, berlines, SUV, 4x4, utilitaires et monospaces."
+      question: "Comment fonctionne le paiement ?",
+      answer: "Le paiement se fait en deux temps : un acompte au début de la prestation, et le solde une fois le travail terminé et validé par vous. Aucune mauvaise surprise."
     },
     {
-      question: "Quels sont vos horaires ?",
-      answer: "Nous sommes ouverts du lundi au vendredi de 9h00 à 17h30. Fermé le samedi et le dimanche."
+      question: "Comment prendre rendez-vous ?",
+      answer: "Appelez ou envoyez un message au 06 73 66 52 98, ou contactez-moi sur Instagram ou TikTok (@brlwash56). Je vous réponds rapidement avec un devis personnalisé."
     },
     {
-      question: "Utilisez-vous des produits professionnels ?",
-      answer: "Oui, nous utilisons exclusivement des produits professionnels de qualité supérieure pour garantir les meilleurs résultats."
+      question: "Intervenez-vous hors de Vannes ?",
+      answer: "Oui ! J'interviens dans tout le Morbihan. Pour les formules Signature et Excellence, le déplacement est inclus jusqu'à 8 ou 15 km. Au-delà, un supplément kilométrique peut s'appliquer."
     }
   ],
 
-  // SEO
   seo: {
-    title: "Brillance Auto 22 - Nettoyage & Detailing Auto Trévé (22)",
-    description: "Brillance Auto 22 : nettoyage intérieur/extérieur et detailing automobile à Trévé. Protection céramique, polissage, traitement antibactérien. Particuliers & professionnels.",
-    keywords: "nettoyage auto Trévé, detailing automobile 22, lavage auto Loudéac, polissage voiture, protection céramique, nettoyage intérieur auto, Brillance Auto 22, esthétique auto Côtes d'Armor, shampouinage voiture"
+    title: "BRL Wash 56 - Nettoyage Automobile À Domicile Vannes (56)",
+    description: "BRL Wash 56 : nettoyage automobile et mobilier à domicile à Vannes et dans le Morbihan. 3 formules dès 55€. Nettoyage canapés dès 30€. 100% autonome, intervient en appartement. ☎️ 06 73 66 52 98",
+    keywords: "nettoyage auto domicile Vannes, lavage voiture Morbihan, BRL Wash 56, nettoyage canapé domicile, aspirateur extracteur Vannes, nettoyage intérieur voiture 56, nettoyage mobilier Morbihan"
   },
 
-  // THÈME
   theme: {
-    primary: "red", // Rouge du logo
-    accent: "gray", // Gris élégant
-    mode: "dark" // Mode sombre pour mettre en valeur les véhicules
+    primary: "cyan",
+    mode: "dark"
   }
 };

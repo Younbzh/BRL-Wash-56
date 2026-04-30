@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, Phone, MapPin, ChevronRight, CheckCircle, Award, AlertCircle, Star, ArrowRight, Sparkles, Shield, Clock } from 'lucide-react';
+import { Menu, X, Mail, Phone, MapPin, ChevronRight, CheckCircle, AlertCircle, ArrowRight, Sparkles, Shield, Clock, Home } from 'lucide-react';
 import { siteConfig } from './config/siteConfig';
 
 export default function App() {
@@ -17,154 +17,33 @@ export default function App() {
     setIsMenuOpen(false);
   };
 
-  const phoneHref = 'tel:' + siteConfig.contact.phone.replace(/\s/g, '');
-  const whatsappHref = 'https://wa.me/33628787937';
-
-  const services = [
-    {
-      title: 'Nettoyage Extérieur',
-      icon: '💧',
-      price: 'À partir de 40€',
-      color: 'border-blue-500/30 hover:border-blue-500',
-      items: [
-        'Lavage extérieur complet',
-        'Dégoudronnage',
-        'Entrées de portes, contour de coffre',
-        'Compartiment moteur',
-        'Séchage avec cire de finition',
-      ],
-    },
-    {
-      title: 'Nettoyage Intérieur & Extérieur',
-      icon: '✨',
-      price: 'À partir de 120€',
-      color: 'border-red-500/30 hover:border-red-500',
-      badge: 'Populaire',
-      items: [
-        'Désinfection de l\'habitacle',
-        'Nettoyage des vitres',
-        'Shampouinage des sièges et tapis',
-        'Entretien des plastiques',
-        'Lavage extérieur complet',
-        'Dégoudronnage',
-        'Séchage avec cire de finition',
-      ],
-    },
-    {
-      title: 'Rénovation Phares',
-      icon: '💡',
-      price: '60€ la paire',
-      color: 'border-yellow-500/30 hover:border-yellow-500',
-      items: [
-        'Passage contrôle technique',
-        'Visibilité retrouvée',
-        'Esthétique comme neuf',
-        'Solution économique',
-      ],
-    },
-    {
-      title: 'Polissage / Lustrage',
-      icon: '🔆',
-      price: 'À partir de 200€',
-      color: 'border-pink-500/30 hover:border-pink-500',
-      items: [
-        'Suppression des micro-rayures',
-        'Supprime le voile terne',
-        'Corrige et fait briller',
-        'Protection longue durée',
-      ],
-    },
-    {
-      title: 'Décontamination Carrosserie',
-      icon: '🧪',
-      price: 'Sur devis',
-      color: 'border-green-500/30 hover:border-green-500',
-      items: [
-        'Élimination des contaminants',
-        'Argile décontaminante',
-        'Préparation au polissage',
-        'Protection de la peinture',
-      ],
-    },
-    {
-      title: 'Protection Céramique',
-      icon: '🛡️',
-      price: 'Sur devis',
-      color: 'border-purple-500/30 hover:border-purple-500',
-      items: [
-        'Protection ultra-durable',
-        'Brillance longue durée',
-        'Résistance aux UV',
-        'Facilité d\'entretien',
-      ],
-    },
-  ];
-
-  const realisations = [
-    {
-      avant: '/vw-avant.jpg',
-      apres: '/vw-apres.jpg',
-      titre: 'Volkswagen Passat',
-      soustitre: 'Nettoyage intérieur complet',
-      description: 'Habitacle transformé : tapis et moquettes shampouinés, tableau de bord nettoyé, désinfection complète. Un intérieur comme sorti de concession.',
-      color: 'border-blue-500/20 hover:border-blue-500/50',
-      accent: 'text-blue-400',
-    },
-    {
-      avant: '/peugeot-rouge-avant.jpg',
-      apres: '/peugeot-rouge-apres.jpg',
-      titre: 'Peugeot 207',
-      soustitre: 'Correction de peinture — Polissage',
-      description: 'Carrosserie oxydée et peinture terne remises en état : correction du voile terne, restauration du brillant. Résultat impressionnant sur cette rouge.',
-      color: 'border-red-500/20 hover:border-red-500/50',
-      accent: 'text-red-400',
-    },
-    {
-      avant: '/carrosserie-avant-apres.jpg',
-      apres: null,
-      titre: 'Nettoyage extérieur',
-      soustitre: 'Carrosserie & Jantes',
-      description: 'Nettoyage complet de la carrosserie et des jantes encrassées. Résultat miroir sur cette berline noire — la couleur la plus exigeante.',
-      color: 'border-gray-500/20 hover:border-gray-500/50',
-      accent: 'text-gray-400',
-      single: true,
-    },
-    {
-      avant: '/peugeot208-avant-apres.jpg',
-      apres: null,
-      titre: 'Peugeot 208',
-      soustitre: 'Nettoyage extérieur complet',
-      description: 'Carrosserie décontaminée, lavage manuel soigné, jantes nettoyées. Le noir révèle chaque détail — et le résultat est saisissant.',
-      color: 'border-gray-500/20 hover:border-gray-500/50',
-      accent: 'text-gray-400',
-      single: true,
-    },
-  ];
+  const phoneHref = 'tel:+33673665298';
+  const whatsappHref = 'https://wa.me/33673665298';
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
 
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-950/98 backdrop-blur-md shadow-2xl border-b border-red-500/10' : 'bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-950/98 backdrop-blur-md shadow-2xl border-b border-cyan-500/10' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-red-500/20 bg-black border-2 border-red-500/30">
-                <img src="/logo-brillance.jpg" alt="Brillance Auto 22 Logo" className="w-full h-full object-cover" />
+              <div className="w-14 h-14 rounded-full overflow-hidden shadow-xl shadow-cyan-500/20 bg-black border-2 border-cyan-500/30">
+                <img src="/logo.jpeg" alt="BRL Wash 56 Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <h1 className="text-xl font-black text-white tracking-tight">Brillance Auto 22</h1>
-                <p className="text-xs text-red-400 font-semibold">Trévé — Côtes-d'Armor</p>
+                <h1 className="text-xl font-black text-white tracking-tight">BRL Wash 56</h1>
+                <p className="text-xs text-cyan-400 font-semibold">Vannes — Morbihan</p>
               </div>
             </div>
 
             <div className="hidden md:flex items-center gap-6">
-              <button onClick={() => scrollToSection('accueil')} className="text-gray-300 hover:text-red-400 transition-colors font-semibold text-sm">Accueil</button>
-              <button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-red-400 transition-colors font-semibold text-sm">Services</button>
-              <button onClick={() => scrollToSection('realisations')} className="text-gray-300 hover:text-red-400 transition-colors font-semibold text-sm">Réalisations</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-red-400 transition-colors font-semibold text-sm">Contact</button>
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg hover:from-red-700 hover:to-red-800 transition-all shadow-lg shadow-red-500/30 font-bold text-sm">
-                Devis gratuit
+              <button onClick={() => scrollToSection('accueil')} className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold text-sm">Accueil</button>
+              <button onClick={() => scrollToSection('formules')} className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold text-sm">Formules</button>
+              <button onClick={() => scrollToSection('realisations')} className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold text-sm">Réalisations</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold text-sm">Contact</button>
+              <a href={phoneHref} className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-black px-6 py-3 rounded-lg hover:from-cyan-400 hover:to-cyan-500 transition-all shadow-lg shadow-cyan-500/30 font-black text-sm">
+                Appeler
               </a>
             </div>
 
@@ -174,15 +53,15 @@ export default function App() {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 w-full bg-gray-950 shadow-2xl py-4 border-t border-red-500/20">
-              {['accueil', 'services', 'realisations', 'contact'].map(section => (
-                <button key={section} onClick={() => scrollToSection(section)} className="block w-full text-left px-6 py-4 text-gray-300 hover:bg-gray-900 hover:text-red-400 capitalize font-semibold">
-                  {section}
+            <div className="md:hidden absolute top-full left-0 w-full bg-gray-950 shadow-2xl py-4 border-t border-cyan-500/20">
+              {['accueil', 'formules', 'realisations', 'contact'].map(section => (
+                <button key={section} onClick={() => scrollToSection(section)} className="block w-full text-left px-6 py-4 text-gray-300 hover:bg-gray-900 hover:text-cyan-400 capitalize font-semibold">
+                  {section === 'formules' ? 'Formules' : section}
                 </button>
               ))}
               <div className="px-6 pt-2">
-                <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="block text-center bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg font-bold">
-                  Devis gratuit
+                <a href={phoneHref} className="block text-center bg-gradient-to-r from-cyan-500 to-cyan-600 text-black px-6 py-3 rounded-lg font-black">
+                  Appeler — 06 73 66 52 98
                 </a>
               </div>
             </div>
@@ -193,52 +72,51 @@ export default function App() {
       {/* Hero */}
       <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/hero-brillance.jpg" alt="Brillance Auto 22 - Atelier detailing Treve" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+          <img src="/voiture-clean.jpeg" alt="BRL Wash 56 - Nettoyage intérieur automobile Vannes" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 py-32 relative z-10">
           <div className="max-w-3xl">
 
-            <div className="inline-flex items-center gap-2 bg-red-600/90 backdrop-blur-sm px-5 py-2 rounded-full mb-6 shadow-lg">
-              <Sparkles className="text-white" size={16} />
-              <span className="text-white font-bold text-sm tracking-wider">DETAILING PROFESSIONNEL — TREVE (22)</span>
+            <div className="inline-flex items-center gap-2 bg-cyan-500/90 backdrop-blur-sm px-5 py-2 rounded-full mb-6 shadow-lg">
+              <Sparkles className="text-black" size={16} />
+              <span className="text-black font-black text-sm tracking-wider">NETTOYAGE AUTO & MOBILIER — VANNES (56)</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
               <span className="text-white drop-shadow-2xl">Votre voiture</span>
               <br />
-              <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
-                retrouve son éclat
+              <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
+                propre à domicile
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-4 leading-relaxed max-w-xl">
-              Nettoyage intérieur & extérieur, polissage, décontamination, protection céramique.
-              Particuliers et professionnels, tous véhicules.
+              Jean-Damien intervient directement chez vous avec son matériel professionnel autonome.
+              Voiture, canapés, matelas — partout en Morbihan.
             </p>
 
-            <p className="text-base text-red-400 font-bold mb-10">
-              ✨ Brillance Auto 22 — Trévé, Côtes-d'Armor
+            <p className="text-base text-cyan-400 font-bold mb-10">
+              ⚡ 100% autonome — intervient même en appartement · Vannes, Morbihan (56)
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-10 py-5 bg-gradient-to-r from-red-600 to-red-700 rounded-full font-black text-lg text-white shadow-2xl shadow-red-500/40 hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+                href={phoneHref}
+                className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full font-black text-lg text-black shadow-2xl shadow-cyan-500/40 hover:shadow-cyan-500/70 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
               >
-                <span>Demander un devis</span>
-                <ChevronRight className="group-hover:translate-x-1 transition-transform" size={22} />
+                <Phone size={22} />
+                <span>06 73 66 52 98</span>
               </a>
 
               <button
-                onClick={() => scrollToSection('realisations')}
-                className="px-10 py-5 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full font-bold text-lg text-white border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-3"
+                onClick={() => scrollToSection('formules')}
+                className="px-10 py-5 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full font-bold text-lg text-white border border-white/30 hover:border-cyan-400/60 transition-all flex items-center justify-center gap-3"
               >
-                <span>Voir les réalisations</span>
+                <span>Voir les formules</span>
+                <ChevronRight size={20} />
               </button>
             </div>
 
@@ -251,18 +129,11 @@ export default function App() {
       </section>
 
       {/* Bandeau valeurs */}
-      <section className="py-8 px-4 bg-gray-900 border-y border-red-500/10">
+      <section className="py-8 px-4 bg-gray-900 border-y border-cyan-500/10">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            {[
-              { icon: '⭐', text: 'Qualité professionnelle' },
-              { icon: '✨', text: 'Finitions impeccables' },
-              { icon: '🧴', text: 'Produits premium' },
-              { icon: '👔', text: 'Particuliers & Pros' },
-              { icon: '❤️', text: 'Passion du détail' },
-              { icon: '😊', text: 'Satisfaction garantie' },
-            ].map((value, index) => (
-              <div key={index} className="bg-gray-800/50 px-5 py-2 rounded-full flex items-center gap-2 border border-gray-700 hover:border-red-500/50 transition-all">
+            {siteConfig.values.map((value, index) => (
+              <div key={index} className="bg-gray-800/50 px-5 py-2 rounded-full flex items-center gap-2 border border-gray-700 hover:border-cyan-500/50 transition-all">
                 <span className="text-lg">{value.icon}</span>
                 <span className="font-semibold text-gray-300 text-sm">{value.text}</span>
               </div>
@@ -271,84 +142,94 @@ export default function App() {
         </div>
       </section>
 
-      {/* A propos */}
+      {/* À propos */}
       <section className="py-20 px-4 bg-gray-950">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-red-400 font-bold text-sm uppercase tracking-wider mb-4 block">Qui sommes-nous</span>
+              <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-4 block">Qui suis-je</span>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-                L'excellence du <span className="text-red-400">detailing auto</span> à Trévé
+                18 ans, <span className="text-cyan-400">passionné</span>,<br />et déjà entrepreneur
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Brillance Auto 22 est votre spécialiste du nettoyage et du detailing automobile dans les Côtes-d'Armor.
-                Installé à Trévé, nous mettons notre expertise et notre passion au service de votre véhicule.
+                Né en Polynésie et vannetais depuis l'âge de 3 ans, Jean-Damien Barle a créé BRL Wash 56
+                à 18 ans avec une ambition claire : vous apporter un nettoyage de qualité pro, sans que vous
+                ayez à vous déplacer. Fourgon utilitaire aménagé, groupe électrogène, compresseur,
+                aspirateur extracteur et nettoyeur haute pression :
+                il est <strong className="text-white">totalement autonome</strong>.
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Du simple nettoyage extérieur au polissage professionnel avec protection céramique,
-                chaque prestation est réalisée avec les meilleurs produits et une attention extrême aux détails.
+                Il intervient chez les particuliers à leur domicile ou sur leur lieu de travail,
+                y compris en appartement aux étages supérieurs, sans besoin d'eau ni d'électricité sur place.
               </p>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { icon: <Sparkles size={24} />, label: 'Finitions premium' },
-                  { icon: <Shield size={24} />, label: 'Protection longue durée' },
+                  { icon: <Home size={24} />, label: 'À domicile' },
+                  { icon: <Shield size={24} />, label: '100% autonome' },
                   { icon: <Clock size={24} />, label: 'Sur rendez-vous' },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-gray-800/50 rounded-2xl p-4 text-center border border-gray-700">
-                    <div className="text-red-400 flex justify-center mb-2">{item.icon}</div>
+                    <div className="text-cyan-400 flex justify-center mb-2">{item.icon}</div>
                     <p className="text-xs font-semibold text-gray-300">{item.label}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-red-500/20">
-                <img src="/action-decontamination.jpg" alt="Décontamination carrosserie Brillance Auto 22" className="w-full h-[500px] object-cover object-top" />
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-cyan-500/20">
+                <img src="/gerant.avif" alt="Jean-Damien Barle — BRL Wash 56 Vannes" className="w-full h-[500px] object-cover object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-red-600 rounded-2xl px-6 py-4 shadow-2xl shadow-red-500/40">
-                <p className="text-white font-black text-2xl">100%</p>
-                <p className="text-red-200 text-sm font-semibold">Satisfaction client</p>
+              <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl px-6 py-4 shadow-2xl shadow-cyan-500/40">
+                <p className="text-black font-black text-2xl">100%</p>
+                <p className="text-black/70 text-sm font-bold">Autonome sur site</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services avec prix */}
-      <section id="services" className="py-20 px-4 bg-gray-900">
+      {/* Formules voiture */}
+      <section id="formules" className="py-20 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <span className="text-red-400 font-bold text-sm uppercase tracking-wider mb-4 block">Ce que nous faisons</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Nos prestations</h2>
-            <p className="text-xl text-gray-400">Une gamme complète pour l'entretien esthétique de votre véhicule</p>
+            <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-4 block">Nettoyage automobile</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Nos formules</h2>
+            <p className="text-xl text-gray-400 mb-3">Nettoyage intérieur à domicile — 3 niveaux de prestation</p>
+            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 px-5 py-2 rounded-full">
+              <span className="text-cyan-400 font-bold text-sm">💳 {siteConfig.paiement}</span>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className={`bg-gray-800/50 rounded-3xl p-8 shadow-2xl transition-all border-2 ${service.color} group relative`}>
-                {service.badge && (
+          <div className="grid md:grid-cols-3 gap-6">
+            {siteConfig.formules.map((formule, index) => (
+              <div key={index} className={`bg-gray-800/50 rounded-3xl p-8 shadow-2xl transition-all border-2 ${formule.color} group relative`}>
+                {formule.badge && (
                   <div className="absolute -top-3 left-8">
-                    <span className="bg-red-600 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg">{service.badge}</span>
+                    <span className="bg-cyan-500 text-black text-xs font-black px-4 py-1.5 rounded-full shadow-lg">{formule.badge}</span>
                   </div>
                 )}
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-black text-white mb-2 group-hover:text-red-400 transition-colors">{service.title}</h3>
-                <p className="text-red-400 font-black text-2xl mb-5">{service.price}</p>
-                <ul className="space-y-2">
-                  {service.items.map((item, idx) => (
+                <div className="mb-4">
+                  <h3 className="text-2xl font-black text-white mb-1 group-hover:text-cyan-400 transition-colors">{formule.name}</h3>
+                  <p className="text-cyan-400 font-black text-4xl">{formule.price}</p>
+                </div>
+                <ul className="space-y-2 mb-6">
+                  {formule.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle className="text-red-500 flex-shrink-0 mt-0.5" size={15} />
+                      <CheckCircle className="text-cyan-500 flex-shrink-0 mt-0.5" size={15} />
                       <span className="text-sm text-gray-300">{item}</span>
                     </li>
                   ))}
                 </ul>
+                {formule.deplacement && (
+                  <div className="mb-4 bg-cyan-500/10 border border-cyan-500/20 rounded-xl px-4 py-2">
+                    <p className="text-cyan-400 text-xs font-bold">🚐 {formule.deplacement}</p>
+                  </div>
+                )}
                 <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 block text-center py-3 rounded-xl border border-red-500/30 hover:border-red-500 hover:bg-red-500/10 text-red-400 font-semibold text-sm transition-all"
+                  href={phoneHref}
+                  className="block text-center py-3 rounded-xl border border-cyan-500/30 hover:border-cyan-500 hover:bg-cyan-500/10 text-cyan-400 font-semibold text-sm transition-all"
                 >
-                  Demander un devis →
+                  Réserver cette formule →
                 </a>
               </div>
             ))}
@@ -356,121 +237,99 @@ export default function App() {
         </div>
       </section>
 
-      {/* AVANT / APRES */}
-      <section id="realisations" className="py-20 px-4 bg-gray-950">
+      {/* Nettoyage mobilier */}
+      <section className="py-20 px-4 bg-gray-950">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-4 block">Service complémentaire</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Nettoyage Mobilier</h2>
+            <p className="text-xl text-gray-400">Canapés & matelas — à votre domicile</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-cyan-500/20">
+              <img src="/tarif-mobilier.jpeg" alt="Tarifs nettoyage mobilier BRL Wash 56" className="w-full object-contain" />
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Grâce à son aspirateur extracteur professionnel, Jean-Damien nettoie aussi vos canapés et matelas,
+                directement chez vous. Résultat garanti.
+              </p>
+              {siteConfig.mobilier.tarifs.map((tarif, index) => (
+                <div key={index} className="flex items-center justify-between bg-gray-800/50 rounded-xl px-5 py-3 border border-gray-700 hover:border-cyan-500/40 transition-all">
+                  <span className="text-gray-300 font-semibold">{tarif.label}</span>
+                  <span className="text-cyan-400 font-black text-xl">{tarif.price}</span>
+                </div>
+              ))}
+              <p className="text-gray-500 text-xs mt-4">{siteConfig.mobilier.note}</p>
+              <a
+                href={phoneHref}
+                className="block mt-6 text-center py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-black text-lg shadow-lg shadow-cyan-500/20 hover:scale-105 transition-all"
+              >
+                Demander un devis mobilier
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Avant / Après */}
+      <section id="realisations" className="py-20 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <span className="text-red-400 font-bold text-sm uppercase tracking-wider mb-4 block">Nos travaux</span>
+            <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-4 block">Nos travaux</span>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Avant / Après</h2>
             <p className="text-xl text-gray-400">Les résultats parlent d'eux-mêmes</p>
           </div>
 
           <div className="space-y-8">
 
-            {/* VW Passat interieur */}
-            <div className={`bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 ${realisations[0].color} transition-all`}>
+            {/* VW Passat — intérieur */}
+            <div className="bg-gray-800 rounded-3xl overflow-hidden shadow-2xl border-2 border-cyan-500/20 hover:border-cyan-500/50 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative bg-black flex items-center justify-center p-4">
-                  <img src="/vw-avant.jpg" alt="VW Passat interieur avant nettoyage" className="w-full object-contain max-h-[420px]" />
+                  <img src="/vw-avant.jpg" alt="VW Passat intérieur avant nettoyage BRL Wash 56" className="w-full object-contain max-h-[420px]" />
                   <div className="absolute bottom-4 left-4">
                     <span className="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">AVANT</span>
                   </div>
                 </div>
                 <div className="relative bg-black flex items-center justify-center p-4">
-                  <img src="/vw-apres.jpg" alt="VW Passat interieur apres nettoyage" className="w-full object-contain max-h-[420px]" />
+                  <img src="/vw-apres.jpg" alt="VW Passat intérieur après nettoyage BRL Wash 56" className="w-full object-contain max-h-[420px]" />
                   <div className="absolute bottom-4 left-4">
-                    <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">APRES</span>
+                    <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">APRÈS</span>
                   </div>
                 </div>
               </div>
-              <div className="p-8 border-t border-gray-800">
+              <div className="p-8 border-t border-gray-700">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
                   <div>
-                    <span className={`font-bold text-sm uppercase tracking-wider ${realisations[0].accent}`}>Nettoyage intérieur complet</span>
+                    <span className="font-bold text-sm uppercase tracking-wider text-cyan-400">Nettoyage intérieur complet</span>
                     <h3 className="text-2xl font-black text-white mt-1">Volkswagen Passat</h3>
                   </div>
-                  <p className="text-gray-400 md:ml-8 leading-relaxed">{realisations[0].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Peugeot rouge polissage */}
-            <div className={`bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 ${realisations[1].color} transition-all`}>
-              <div className="grid md:grid-cols-2">
-                <div className="relative bg-black flex items-center justify-center p-4">
-                  <img src="/peugeot-rouge-avant.jpg" alt="Peugeot 207 carrosserie oxydee avant polissage" className="w-full object-contain max-h-[420px]" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">AVANT</span>
-                  </div>
-                </div>
-                <div className="relative bg-black flex items-center justify-center p-4">
-                  <img src="/peugeot-rouge-apres.jpg" alt="Peugeot 207 carrosserie apres polissage" className="w-full object-contain max-h-[420px]" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">APRES</span>
-                  </div>
-                </div>
-              </div>
-              <div className="p-8 border-t border-gray-800">
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
-                  <div>
-                    <span className={`font-bold text-sm uppercase tracking-wider ${realisations[1].accent}`}>Correction de peinture</span>
-                    <h3 className="text-2xl font-black text-white mt-1">Peugeot 207 — Polissage</h3>
-                  </div>
-                  <p className="text-gray-400 md:ml-8 leading-relaxed">{realisations[1].description}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Carrosserie noire avant/apres */}
-            <div className="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-700/30 hover:border-gray-500/50 transition-all">
-              <div className="relative bg-black flex items-center justify-center p-4">
-                <img src="/carrosserie-avant-apres.jpg" alt="Carrosserie et jantes avant apres nettoyage" className="w-full object-contain max-h-[420px]" />
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">AVANT</span>
-                  <ArrowRight className="text-orange-400" size={16} />
-                  <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">APRES</span>
-                </div>
-              </div>
-              <div className="p-8 border-t border-gray-800">
-                <span className="text-gray-400 font-bold text-sm uppercase tracking-wider">Nettoyage extérieur</span>
-                <h3 className="text-2xl font-black text-white mt-1 mb-2">Carrosserie & Jantes</h3>
-                <p className="text-gray-400 leading-relaxed">{realisations[2].description}</p>
-              </div>
-            </div>
-
-            {/* Peugeot 208 avant/apres */}
-            <div className="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-700/30 hover:border-gray-500/50 transition-all">
-              <div className="relative bg-black flex items-center justify-center p-4">
-                <img src="/peugeot208-avant-apres.jpg" alt="Peugeot 208 noire avant apres nettoyage" className="w-full object-contain max-h-[420px]" />
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">AVANT</span>
-                  <ArrowRight className="text-orange-400" size={16} />
-                  <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">APRES</span>
-                </div>
-              </div>
-              <div className="p-8 border-t border-gray-800">
-                <span className="text-gray-400 font-bold text-sm uppercase tracking-wider">Nettoyage extérieur complet</span>
-                <h3 className="text-2xl font-black text-white mt-1 mb-2">Peugeot 208</h3>
-                <p className="text-gray-400 leading-relaxed">{realisations[3].description}</p>
-              </div>
-            </div>
-
-            {/* Suzuki GSX-R showcase */}
-            <div className="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border-2 border-red-500/20 hover:border-red-500/50 transition-all">
-              <div className="grid md:grid-cols-2">
-                <div className="relative">
-                  <img src="/suzuki-gsx.jpg" alt="Suzuki GSX-R apres detailing Brillance Auto 22" className="w-full h-80 object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                <div className="p-8 flex flex-col justify-center">
-                  <span className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">Detailing moto</span>
-                  <h3 className="text-3xl font-black text-white mb-3">Suzuki GSX-R</h3>
-                  <p className="text-red-400 font-bold mb-4">Nettoyage & mise en valeur</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Brillance Auto 22 s'occupe aussi des deux-roues. Nettoyage complet, traitement des plastiques,
-                    brillance des carénages. Cette GSX-R noire est un vrai miroir après passage en atelier.
+                  <p className="text-gray-400 md:ml-8 leading-relaxed">
+                    Habitacle transformé : tapis et moquettes aspirés en profondeur, tableau de bord nettoyé,
+                    plastiques traités, vitres dégraissées. Un intérieur retrouvé comme à la sortie de concession.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Renault clean */}
+            <div className="bg-gray-800 rounded-3xl overflow-hidden shadow-2xl border-2 border-cyan-500/20 hover:border-cyan-500/50 transition-all">
+              <div className="relative bg-black flex items-center justify-center p-4">
+                <img src="/voiture-clean.jpeg" alt="Renault Kadjar intérieur propre BRL Wash 56" className="w-full object-contain max-h-[420px]" />
+                <div className="absolute top-4 left-4 flex items-center gap-2">
+                  <span className="bg-green-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">RÉSULTAT</span>
+                </div>
+              </div>
+              <div className="p-8 border-t border-gray-700">
+                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider">Nettoyage intérieur — formule Signature</span>
+                <h3 className="text-2xl font-black text-white mt-1 mb-2">Renault Kadjar</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Intérieur noir soigneusement nettoyé : plastiques brillants, vitres cristallines, volant traité,
+                  contours de portes détaillés. Ce Kadjar Black Edition retrouve tout son cachet.
+                </p>
               </div>
             </div>
 
@@ -479,19 +338,19 @@ export default function App() {
       </section>
 
       {/* Avantages */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-gray-950">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Pourquoi Brillance Auto 22 ?</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Pourquoi BRL Wash 56 ?</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: '⭐', title: 'Qualité pro', desc: 'Produits et techniques de niveau professionnel' },
-              { icon: '🧴', title: 'Produits premium', desc: 'Uniquement des produits haut de gamme' },
-              { icon: '🏢', title: 'Particuliers & Pros', desc: 'Flottes, véhicules de société, particuliers' },
-              { icon: '💎', title: 'Finitions parfaites', desc: 'Attention aux détails sur chaque prestation' },
+              { icon: '🏠', title: 'À domicile', desc: 'Je viens chez vous, sans déplacement de votre part' },
+              { icon: '⚡', title: 'Autonome', desc: 'Groupe électrogène — intervient même en appartement' },
+              { icon: '🧴', title: 'Matériel pro', desc: 'Aspirateur extracteur, nettoyeur vapeur, produits pros' },
+              { icon: '💎', title: 'Résultat garanti', desc: 'Acompte au départ, solde une fois satisfait' },
             ].map((item, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-red-500/10 transition-all hover:-translate-y-2 border border-gray-700 hover:border-red-500/30 text-center">
+              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all hover:-translate-y-2 border border-gray-700 hover:border-cyan-500/30 text-center">
                 <div className="text-4xl mb-3">{item.icon}</div>
                 <h3 className="font-black text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-400">{item.desc}</p>
@@ -502,16 +361,16 @@ export default function App() {
       </section>
 
       {/* Zone d'intervention */}
-      <section className="py-16 px-4 bg-gray-950">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-white mb-3">Zone d'intervention</h2>
-            <p className="text-gray-400">Trévé (22600) et environs</p>
+            <p className="text-gray-400">Vannes (56) et tout le Morbihan</p>
           </div>
-          <div className="bg-gray-900 rounded-3xl p-8 border border-red-500/10">
+          <div className="bg-gray-800 rounded-3xl p-8 border border-cyan-500/10">
             <div className="flex flex-wrap justify-center gap-3">
               {siteConfig.zone.mainCities.map((city, index) => (
-                <span key={index} className="bg-gray-800 px-4 py-2 rounded-full text-sm font-semibold text-gray-300 border border-gray-700 hover:border-red-500/40 transition-all">
+                <span key={index} className="bg-gray-700 px-4 py-2 rounded-full text-sm font-semibold text-gray-300 border border-gray-600 hover:border-cyan-500/40 transition-all">
                   {city}
                 </span>
               ))}
@@ -521,7 +380,7 @@ export default function App() {
       </section>
 
       {/* Processus */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-gray-950">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Comment ça marche ?</h2>
@@ -529,15 +388,15 @@ export default function App() {
           <div className="grid md:grid-cols-5 gap-4">
             {siteConfig.process.steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-gray-800/50 rounded-3xl p-5 shadow-xl text-center border border-gray-700 hover:border-red-500/30 transition-all">
-                  <div className="w-14 h-14 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-3 text-white font-black text-xl shadow-lg shadow-red-500/20">
+                <div className="bg-gray-800/50 rounded-3xl p-5 shadow-xl text-center border border-gray-700 hover:border-cyan-500/30 transition-all">
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-3 text-black font-black text-xl shadow-lg shadow-cyan-500/20">
                     {step.number}
                   </div>
                   <h3 className="font-black text-white mb-1 text-sm">{step.title}</h3>
                   <p className="text-xs text-gray-400 leading-relaxed">{step.description}</p>
                 </div>
                 {index < siteConfig.process.steps.length - 1 && (
-                  <ChevronRight className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-red-500/40" size={20} />
+                  <ChevronRight className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-cyan-500/40" size={20} />
                 )}
               </div>
             ))}
@@ -546,20 +405,20 @@ export default function App() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-gray-950">
+      <section className="py-20 px-4 bg-gray-900">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Questions fréquentes</h2>
           </div>
           <div className="space-y-4">
             {siteConfig.faq.map((item, index) => (
-              <div key={index} className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-red-500/30 transition-all">
+              <div key={index} className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/30 transition-all">
                 <h3 className="font-black text-white mb-3 flex items-start gap-3">
-                  <span className="text-red-500 flex-shrink-0">Q:</span>
+                  <span className="text-cyan-500 flex-shrink-0">Q:</span>
                   {item.question}
                 </h3>
                 <p className="text-gray-400 leading-relaxed pl-8">
-                  <span className="text-red-400 font-bold">R:</span> {item.answer}
+                  <span className="text-cyan-400 font-bold">R:</span> {item.answer}
                 </p>
               </div>
             ))}
@@ -568,91 +427,116 @@ export default function App() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 px-4 bg-gray-900">
+      <section id="contact" className="py-20 px-4 bg-gray-950">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <span className="text-red-400 font-bold text-sm uppercase tracking-wider mb-4 block">Nous contacter</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">{siteConfig.contact.title}</h2>
-            <p className="text-gray-400">Contactez-nous par message pour un devis personnalisé</p>
+            <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-4 block">Me contacter</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Prendre rendez-vous</h2>
+            <p className="text-gray-400">Appelez ou envoyez un message — je réponds rapidement</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-5">
-              <div className="bg-gray-800/50 rounded-3xl p-7 border border-gray-700">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-500/20">
-                    <MapPin className="text-white" size={22} />
-                  </div>
-                  <div>
-                    <h3 className="font-black text-white mb-1">Adresse</h3>
-                    <p className="text-gray-300 font-bold">51 Le Cosquer — Trévé (22600)</p>
-                    <p className="text-gray-400 text-sm mt-1">Côtes-d'Armor, Bretagne</p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-7 shadow-2xl shadow-red-500/20 text-white">
+              <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-3xl p-7 shadow-2xl shadow-cyan-500/20 text-black">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-white" size={22} />
+                  <div className="w-12 h-12 bg-black/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="text-black" size={22} />
                   </div>
                   <div>
                     <h3 className="font-black mb-1">Téléphone</h3>
-                    <a href={phoneHref} className="text-2xl font-black hover:text-red-200 transition-colors block mb-1">
+                    <a href={phoneHref} className="text-3xl font-black hover:text-black/70 transition-colors block mb-1">
                       {siteConfig.contact.phone}
                     </a>
-                    <p className="text-red-200 text-sm">Du lundi au vendredi 9h-17h30</p>
+                    <p className="text-black/70 text-sm font-semibold">Appel & SMS — réponse rapide</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-800/50 rounded-3xl p-7 border border-gray-700">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-500/20">
-                    <Mail className="text-white" size={22} />
+                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/20">
+                    <Mail className="text-black" size={22} />
                   </div>
                   <div>
                     <h3 className="font-black text-white mb-1">Email</h3>
-                    <p className="text-gray-300 text-sm">{siteConfig.contact.email}</p>
+                    <a href={`mailto:${siteConfig.contact.email}`} className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors">
+                      {siteConfig.contact.email}
+                    </a>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-800/50 rounded-3xl p-7 border border-gray-700">
-                <h3 className="font-black text-white mb-4">Horaires</h3>
-                <div className="space-y-2">
-                  {siteConfig.contact.schedule.hours.map((h, idx) => (
-                    <div key={idx} className="flex justify-between text-sm">
-                      <span className="text-gray-400">{h.day}</span>
-                      <span className={h.hours === 'Fermé' ? 'text-red-400' : 'text-gray-300 font-semibold'}>{h.hours}</span>
-                    </div>
-                  ))}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/20">
+                    <MapPin className="text-black" size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-black text-white mb-1">Zone d'intervention</h3>
+                    <p className="text-gray-300 font-bold">Vannes et tout le Morbihan</p>
+                    <p className="text-gray-400 text-sm mt-1">Service à domicile — je viens chez vous</p>
+                  </div>
                 </div>
-                <p className="text-red-400 text-sm font-bold mt-4">📞 Sur rendez-vous uniquement</p>
               </div>
+
+              <div className="bg-gray-800/50 rounded-3xl p-7 border border-gray-700">
+                <h3 className="font-black text-white mb-4">Réseaux sociaux</h3>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href={siteConfig.contact.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors font-semibold"
+                  >
+                    <span className="text-xl">📷</span>
+                    <span>Instagram — @brlwash56</span>
+                  </a>
+                  <a
+                    href={siteConfig.contact.social.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors font-semibold"
+                  >
+                    <span className="text-xl">🎵</span>
+                    <span>TikTok — @brl.wash.56</span>
+                  </a>
+                  <a
+                    href={siteConfig.contact.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors font-semibold"
+                  >
+                    <span className="text-xl">📘</span>
+                    <span>Facebook — BRL Wash 56</span>
+                  </a>
+                </div>
+              </div>
+
             </div>
 
             <div className="space-y-5">
-              <div className="rounded-3xl overflow-hidden shadow-2xl h-[350px] border-2 border-red-500/20">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-[350px] border-2 border-cyan-500/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.8!2d-2.8333!3d48.1667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEwJzAwLjEiTiAywrA1MCcwMC4wIlc!5e0!3m2!1sfr!2sfr!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42950.9!2d-2.7900!3d47.6558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810b10e84b2e131%3A0x44ef0e9da31cfc3c!2sVannes!5e0!3m2!1sfr!2sfr!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Brillance Auto 22 - Trévé"
+                  title="BRL Wash 56 - Vannes Morbihan"
                 ></iframe>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-7 border-2 border-red-500/20">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-7 border-2 border-cyan-500/20">
                 <h3 className="text-xl font-black text-white mb-5 flex items-center gap-3">
-                  <AlertCircle className="text-red-400" size={24} />
+                  <AlertCircle className="text-cyan-400" size={24} />
                   Demandez votre devis
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Contactez-nous par message privé en précisant votre véhicule et les prestations souhaitées.
-                  Nous vous répondons rapidement avec un devis personnalisé.
+                  Précisez votre type de véhicule et la formule souhaitée.
+                  Je vous réponds rapidement avec un devis personnalisé.
+                  Paiement : acompte au début, solde au résultat.
                 </p>
                 <a
                   href={whatsappHref}
@@ -665,13 +549,21 @@ export default function App() {
                   </svg>
                   <span>Écrire sur WhatsApp</span>
                 </a>
+
+                <a
+                  href={phoneHref}
+                  className="flex items-center justify-center gap-3 w-full py-4 mt-3 bg-cyan-500 hover:bg-cyan-400 rounded-2xl font-black text-black text-lg transition-all shadow-lg shadow-cyan-500/20 hover:scale-105"
+                >
+                  <Phone size={22} />
+                  <span>Appeler — 06 73 66 52 98</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bouton WhatsApp flottant */}
+      {/* Bouton flottant WhatsApp */}
       <a
         href={whatsappHref}
         target="_blank"
@@ -685,46 +577,54 @@ export default function App() {
       </a>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-12 px-4 border-t border-red-500/10">
+      <footer className="bg-black text-white py-12 px-4 border-t border-cyan-500/10">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-900 border border-red-500/20">
-                  <img src="/logo-brillance.jpg" alt="Brillance Auto 22" className="w-full h-full object-cover" />
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-900 border border-cyan-500/20">
+                  <img src="/logo.jpeg" alt="BRL Wash 56" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-red-400">Brillance Auto 22</h3>
-                  <p className="text-gray-500 text-xs">Detailing automobile professionnel</p>
+                  <h3 className="text-lg font-black text-cyan-400">BRL Wash 56</h3>
+                  <p className="text-gray-500 text-xs">Nettoyage automobile à domicile</p>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm">51 Le Cosquer — Trévé (22600)</p>
-              <p className="text-gray-400 text-sm">Côtes-d'Armor, Bretagne</p>
+              <p className="text-gray-400 text-sm">Vannes (56) — Morbihan, Bretagne</p>
+              <p className="text-gray-400 text-sm">Service à domicile partout en Morbihan</p>
             </div>
             <div>
-              <h3 className="text-base font-black mb-4 text-red-400">Navigation</h3>
+              <h3 className="text-base font-black mb-4 text-cyan-400">Navigation</h3>
               <div className="space-y-2">
-                {['accueil', 'services', 'realisations', 'contact'].map(section => (
-                  <button key={section} onClick={() => scrollToSection(section)} className="block text-gray-400 hover:text-red-400 transition-colors capitalize font-semibold text-sm">
-                    {section}
+                {[
+                  { id: 'accueil', label: 'Accueil' },
+                  { id: 'formules', label: 'Formules' },
+                  { id: 'realisations', label: 'Réalisations' },
+                  { id: 'contact', label: 'Contact' },
+                ].map(item => (
+                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="block text-gray-400 hover:text-cyan-400 transition-colors font-semibold text-sm">
+                    {item.label}
                   </button>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-base font-black mb-4 text-red-400">Contact</h3>
+              <h3 className="text-base font-black mb-4 text-cyan-400">Contact</h3>
               <div className="space-y-2 text-gray-400 text-sm">
                 <p className="font-black text-lg text-white">{siteConfig.contact.phone}</p>
                 <p>{siteConfig.contact.email}</p>
-                <p className="mt-3">Lun–Ven : 9h00–17h30</p>
-                <p className="text-red-400 font-semibold">Sur rendez-vous uniquement</p>
+                <div className="mt-3 space-y-1">
+                  <p className="text-gray-500">Instagram · TikTok · Facebook</p>
+                  <p className="text-cyan-400 font-semibold">@brlwash56</p>
+                </div>
+                <p className="text-cyan-400 font-semibold mt-2">Sur rendez-vous — à domicile</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
             <p className="text-gray-600 text-xs text-center md:text-left">
-              © 2026 Brillance Auto 22 — Tous droits réservés — Trévé (22600)
+              © 2026 BRL Wash 56 — Jean-Damien Barle — Vannes (56), Morbihan
             </p>
             <p className="text-gray-700 text-xs">
               Site créé par{' '}
@@ -732,7 +632,7 @@ export default function App() {
                 href="https://avalon-stratege.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-500 hover:text-red-400 transition-colors font-semibold"
+                className="text-cyan-500 hover:text-cyan-400 transition-colors font-semibold"
               >
                 Avalon Stratège
               </a>
