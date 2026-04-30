@@ -94,12 +94,12 @@ export default function App() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-4 leading-relaxed max-w-xl">
-              Jean-Damien intervient directement chez vous avec son matériel professionnel autonome.
+              Je me déplace directement chez vous avec mon matériel professionnel autonome.
               Voiture, canapés, matelas — partout en Morbihan.
             </p>
 
             <p className="text-base text-cyan-400 font-bold mb-10">
-              ⚡ 100% autonome — intervient même en appartement · Vannes, Morbihan (56)
+              ⚡ 100% autonome — j'interviens même en appartement · Vannes, Morbihan (56)
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -152,14 +152,14 @@ export default function App() {
                 18 ans, <span className="text-cyan-400">passionné</span>,<br />et déjà entrepreneur
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Né en Polynésie et vannetais depuis l'âge de 3 ans, Jean-Damien Barle a créé BRL Wash 56
+                Né en Polynésie et vannetais depuis l'âge de 3 ans, j'ai créé BRL Wash 56
                 à 18 ans avec une ambition claire : vous apporter un nettoyage de qualité pro, sans que vous
                 ayez à vous déplacer. Fourgon utilitaire aménagé, groupe électrogène, compresseur,
                 aspirateur extracteur et nettoyeur haute pression :
-                il est <strong className="text-white">totalement autonome</strong>.
+                je suis <strong className="text-white">totalement autonome</strong>.
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Il intervient chez les particuliers à leur domicile ou sur leur lieu de travail,
+                J'interviens chez vous à domicile ou sur votre lieu de travail,
                 y compris en appartement aux étages supérieurs, sans besoin d'eau ni d'électricité sur place.
               </p>
               <div className="grid grid-cols-3 gap-4">
@@ -253,7 +253,7 @@ export default function App() {
 
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed mb-6">
-                Grâce à son aspirateur extracteur professionnel, Jean-Damien nettoie aussi vos canapés et matelas,
+                Grâce à mon aspirateur extracteur professionnel, je nettoie aussi vos canapés et matelas,
                 directement chez vous. Résultat garanti.
               </p>
               {siteConfig.mobilier.tarifs.map((tarif, index) => (
