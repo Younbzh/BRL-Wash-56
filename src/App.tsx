@@ -629,7 +629,7 @@ export default function App() {
             <p className="text-gray-700 text-xs">
               Site créé par{' '}
               <a
-                href="https://avalon-stratege.fr"
+                href="https://www.avalon-stratege.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-500 hover:text-cyan-400 transition-colors font-semibold"
